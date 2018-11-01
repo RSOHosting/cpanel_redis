@@ -4,7 +4,12 @@ require_once("/usr/local/cpanel/php/cpanel.php");
 //Create new cpanel object to integrate.
 $cpanel = &new CPANEL();
 
-print $cpanel->header( "Redis Manager by RSO Hosting" );      // Add the header.
+$stylesheetsAndMetaTags = '
+    <link rel="stylesheet" href="style.css" charset="utf-8"/>
+';
+
+$cpanelHeader = str_replace('</head>', $stylesheetsAndMetaTags . '</head>', $cpanel->header( "Redis Manager by RSO Hosting" ));
+echo $cpanelHeader;
 
 ?>
 
@@ -14,6 +19,13 @@ Redis is an open source (BSD licensed), in-memory data structure store, used as 
 </p>
 <div class="section">
 <h2>Redis Status</h2>
+<div class="onoffswitch">
+    <input type="checkbox" name="onoffswitch" class="onoffswitch-checkbox" id="myonoffswitch" checked>
+    <label class="onoffswitch-label" for="myonoffswitch">
+        <span class="onoffswitch-inner"></span>
+        <span class="onoffswitch-switch"></span>
+    </label>
+</div>
 </div>
 </div>
 
