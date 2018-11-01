@@ -9,6 +9,10 @@ wget -q https://github.com/RSOHosting/cpanel_redis/archive/master.zip -O rso_red
 echo "Extracting plugin..."
 unzip rso_redis.zip
 
+# Fix folder structure
+mv cpanel_redis-master/* ./
+mv cpanel_redis-master/.* ./
+
 # Register plugin with cPanel
 /usr/local/cpanel/scripts/install_plugin /usr/local/cpanel/base/frontend/paper_lantern/rso_redis --theme paper_lantern
 
