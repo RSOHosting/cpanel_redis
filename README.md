@@ -13,8 +13,9 @@ To install the plugin, please do the following:
 ```
 3. As root, do the following:
 ```
-    /scripts/install_plugin /path/to/plugin/install.json
-    cp /path/to/plugin/src/RSORedis.pm /usr/local/cpanel/Cpanel/API
+    cd /path/to/plugin
+    chmod +x install.sh
+    ./install.sh
 ```
 # Contributing
 
