@@ -19,14 +19,8 @@ Redis is an open source (BSD licensed), in-memory data structure store, used as 
 </p>
 <div class="section">
 <h2>Redis Status</h2>
-<label class='toggle-label'>
- <input type='checkbox'/>
-	 <span class='back'>
-		<span class='toggle'></span>
- 		<span class='label on'>ON</span>
-		<span class='label off'>OFF</span>  
-	</span>
-</label>
+  <input  type="checkbox" 
+          class="check check1" id="checkbox">
 </div>
 </div>
 

@@ -1,61 +1,40 @@
-.toggle-label {
+.check{
+  display: block;
+  margin-bottom: 40px;
   position: relative;
-  display: block;
-  width: 300px;
-  height: 100px;
-  margin-top: 8px;
-  border: 1px solid #808080;
-margin: 200px auto;
-}
-.toggle-label input[type=checkbox] { 
-  opacity: 0;
-  position: absolute;
-  width: 100%;
-  height: 100%;
-}
-.toggle-label input[type=checkbox]+.back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: #ed1c24;
-  transition: background 150ms linear;  
-}
-.toggle-label input[type=checkbox]:checked+.back {
-  background: #00a651; /*green*/
+  width: 140px;
+  height: 70px;
+  -webkit-appearance: none;
 }
 
-.toggle-label input[type=checkbox]+.back .toggle {
-  display: block;
+
+/* Check 1*/
+.check1{
+  background: #25CED1;
+  outline: none;
+  border-radius: 60px;
+  box-shadow: inset 0 0 5px rgba(0,0,0,.2);
+  transition: .5s;
+}
+
+.check1:checked{
+  background: #26547C;
+}
+
+.check1:before{
+  content: '';
   position: absolute;
-  content: ' ';
+  width: 70px;
+  height: 70px;
+  border-radius: 60px;
+  top: 0;
+  left: 0;
+  transform: scale(1.1);
+  box-shadow: 0 2px 15px rgba(0,0,0,.2);
   background: #fff;
-  width: 50%; 
-  height: 100%;
-  transition: margin 150ms linear;
-  border: 1px solid #808080;
-  border-radius: 0;
+  transition: .5s;
 }
-.toggle-label input[type=checkbox]:checked+.back .toggle {
-  margin-left: 150px;
-}
-.toggle-label .label {
-  display: block;
-  position: absolute;
-  width: 50%;
-  color: #ddd;
-  line-height: 80px;
-  text-align: center;
-  font-size: 2em;
-}
-.toggle-label .label.on { left: 0px; }
-.toggle-label .label.off { right: 0px; }
 
-.toggle-label input[type=checkbox]:checked+.back .label.on {
-  color: #fff;
-}
-.toggle-label input[type=checkbox]+.back .label.off {
-  color: #fff;
-}
-.toggle-label input[type=checkbox]:checked+.back .label.off {
-  color: #ddd;
+.check1:checked:before{
+  left: 50%;
 }
