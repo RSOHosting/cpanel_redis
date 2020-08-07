@@ -9,7 +9,7 @@ To install the plugin, please do the following:
 1. Login to your server via SSH
 2. Clone the repo:
 ```
-    git clone git@github.com:RSOHosting/cpanel_redis.git
+    git clone https://github.com/RSOHosting/cpanel_redis.git 
 ```
 3. As root, do the following:
 ```

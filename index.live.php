@@ -2,7 +2,7 @@
 require_once("/usr/local/cpanel/php/cpanel.php");
 
 //Create new cpanel object to integrate.
-$cpanel = &new CPANEL();
+$cpanel = new cPanel();
 
 $stylesheetsAndMetaTags = '
     <link rel="stylesheet" href="style.css" charset="utf-8"/>
@@ -25,15 +25,6 @@ Redis is an open source (BSD licensed), in-memory data structure store, used as 
 </div>
 
 <?php
-$connection = ssh2_connect('earth.rso.bg', 22, array('hostkey'=>'ssh-rsa'));
-if (ssh2_auth_pubkey_file($connection, 'root',
-                          'id_rsa.pub',
-                          'id_rsa')) {
-  echo "Public Key Authentication Successful\n";
-} else {
-  die('Public Key Authentication Failed');
-}
-
 print $cpanel->footer();
 
 $cpanel->end();
